@@ -1,3 +1,5 @@
+// Copyright 2022 Divy Srivastava. All rights reserved. MIT license.
+
 // deno-fmt-ignore
 var utf8d = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
