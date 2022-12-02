@@ -1,8 +1,5 @@
 // Copyright 2022 Divy Srivastava. All rights reserved. MIT license.
 
-const UTF8_ACCEPT = 0;
-const UTF8_REJECT = 12;
-
 // deno-fmt-ignore
 const utf8d = Uint8Array.of(
   // The first part of the table maps bytes to character classes that
@@ -39,7 +36,7 @@ let codepoint;
 let state = 0;
 function decodeWithState(byte) {
   const type = utf8d[byte];
-  codepoint = state !== UTF8_ACCEPT
+  codepoint = state !== 0
     ? (byte & 0x3f) | (codepoint << 6)
     : (0xff >> type) & (byte);
   state = utf8d[256 + state + type];
